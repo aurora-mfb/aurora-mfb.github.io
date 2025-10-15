@@ -12,7 +12,7 @@ html{
 
 /* MENU */
 .contenedor-header{
-    background: #0e091b;
+    background: #191425;
     position: fixed;
     width: 100%;
     text-justify: 0 0 #000;
@@ -77,7 +77,7 @@ html{
 
 .init .content-banner{
     padding: 20px;
-    background-color: #0e091b;
+    background-color: #191425;
     max-width: 350px;
     margin: auto;
     text-align: center;
@@ -86,7 +86,7 @@ html{
 
 .init .content-banner img{
     margin-top: 40px;
-    border:10px solid #9772db;
+    border:10px solid #524766;
     display: BLOCK;
     width: 80%;
     margin: auto;
@@ -119,12 +119,12 @@ html{
 }
 
 .init .content-banner .socialMedia a:hover{
-    background-color: #9772db;
+    background-color: #524766;
 }
 
 /* ABOUTME SECTION*/
 .aboutme{
-    background-color: #0e091b;
+    background-color: #131517;
     color: #fff;
     padding: 50px 20px;
 }
@@ -147,8 +147,15 @@ html{
     margin-bottom: 20px;
 }
 
+.aboutme .content-section a{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
 .aboutme .content-section p span{
-    color: #9772db;
+    color: #9389c9;
     font-weight: bold;
 }
 
@@ -176,12 +183,12 @@ html{
 
 .aboutme .tile .col ul li strong{
     display: inline-block;
-    color: #9772db;
+    color: #9389c9;
     width: 130px;
 }
 
 .aboutme .tile .col ul li span{
-    background-color: #9772db;
+    background-color: #9389c9;
     padding: 3px;
     font-weight: bold;
     border-radius: 5px;
@@ -206,7 +213,7 @@ html{
 }
 
 .aboutme .tile .col .content-interests .interests:hover{
-    background-color: #9772db;
+    background-color: #504468;
 }
 
 .aboutme .tile .col .content-interests .interests i{
@@ -214,7 +221,7 @@ html{
     margin-bottom: 10px;
 }
 
-.aboutme button{
+.aboutme .cv-button{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -228,18 +235,18 @@ html{
     z-index: 10;
 }
 
-.aboutme button .overlay{
+.aboutme .cv-button .overlay{
     position: absolute;
     top: 0;
     left: 0;
     width: 0;
     height: 100%;
-    background-color:#9772db;
+    background-color:#504468;
     z-index: -1;
     transition: 1s;
 }
 
-.aboutme button:hover .overlay{
+.aboutme .cv-button:hover .overlay{
     width: 100%;
 }
 
@@ -439,80 +446,114 @@ html{
 
 /* PORTFOLIO SECTION */
 .portfolio {
-    background-color: #252A2E;
-    color: #fff;
-    padding: 50px 20px;
+  background-color: #252A2E;
+  color: #fff;
+  padding: 50px 20px;
 }
 
-.portfolio .content-section {
-    max-width: 1100px;
-    margin: auto;
+.portfolio .section-content {
+  max-width: 1100px;
+  margin: auto;
 }
 
 .portfolio h2 {
-    font-size: 48px;
-    font-family: 'Righteous';
-    text-align: center;
-    padding: 20px 0;
+  font-size: 48px;
+  font-family: 'Righteous';
+  text-align: center;
+  padding: 20px 0;
 }
 
-.portfolio .galery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+/* Grid flexible y ordenado */
+.portfolio .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  justify-content: center;
+  align-items: stretch;
 }
 
-.portfolio .galery .project{
-    position: relative;
-    max-width: 340px;
-    height: fit-content;
-    margin: 10px;
-    cursor: pointer;
+/* Tarjeta con altura fija */
+.portfolio .project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #1e2124;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 450px; /* 🔹 altura uniforme */
 }
 
-.portfolio .galery .project img{
-    width: 100%;
-    display: block;
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(151, 114, 219, 0.3);
 }
 
-.portfolio .galery .project .overlay{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    background: linear-gradient(rgba(28, 182, 152, .8), rgba(28, 182, 152, .8));
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    transition: 1s;
-    font-size: 18px;
-    letter-spacing: 3px;
-    opacity: 0;
+/* Imagen superior */
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  flex-shrink: 0;
 }
 
-.portfolio .galery .project .overlay h3{
-    margin-bottom: 20px;
-    transition: 1s;
+/* Info con scroll interno */
+.project-info {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-.portfolio .galery .project .overlay:hover{
-    opacity: 1;
+/* Contenedor de texto con scroll */
+.project-info p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 15px;
+  flex: 1;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #474070 #1e2124;
 }
 
-.portfolio .galery .project .overlay:hover h3{
-    margin-bottom: 0px;
+/* Estilo scrollbar (para navegadores WebKit) */
+.project-info p::-webkit-scrollbar {
+  width: 6px;
+}
+.project-info p::-webkit-scrollbar-thumb {
+  background-color: #8272db;
+  border-radius: 4px;
+}
+.project-info p::-webkit-scrollbar-track {
+  background: #1e2124;
 }
 
-.portfolio .galery .project a {
-    text-decoration: none; 
-    color: inherit; 
+.project-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: #fff;
+  flex-shrink: 0;
 }
 
-.portfolio .galery .project .overlay h3 {
-    color: #fff; 
-    margin-bottom: 20px;
-    transition: 1s;
+/* Botón */
+.project-info .button {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #8272db;
+  color: #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  flex-shrink: 0;
+}
+
+.project-info .button:hover {
+  background-color: #8272db;
+  color: #fff;
 }
 
 /* CONTACT SECTION */
@@ -535,6 +576,14 @@ html{
     padding: 20px 0;
 }
 
+.contact p{
+    font-size: 18px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+
 .contact .tile{
     display: flex;
 }
@@ -545,18 +594,17 @@ html{
     position: relative;
 }
 
-.contact .col input, .contact .col textarea{
-    display: block;
-    width: 100%;
-    padding: 18px;
-    border: none;
-    margin-bottom: 20px;
-    background-color: #252A2E;
-    color: #fff;
-    font-size: 18px;
+.contact .col .send_email{
+    position: absolute;
+    top:40%;
+    background-color: #272f36;
+    padding: 20px;
+    max-width:350px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-.contact button{
+.contact .button{
     cursor: pointer;
     background-color: transparent;
     border: 2px solid #fff;
@@ -570,7 +618,7 @@ html{
     z-index: 10;
 }
 
-.contact button .overlay{
+.contact .button .overlay{
     position:absolute;
     top: 0;
     left: 0;
@@ -581,7 +629,7 @@ html{
     transition: 1s;
 }
 
-.contact button:hover .overlay{
+.contact .button:hover .overlay{
     width:100%;
 }
 
