@@ -33,7 +33,7 @@ html{
 .contenedor-header header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
-    color: #9772db;
+    color: #9389c9;
     text-decoration: none;
 }
 
@@ -52,7 +52,7 @@ html{
 }
 
 .contenedor-header header nav ul li a:hover{
-    color: #9772db;
+    color: #9389c9;
 }
 .nav-responsive{
     background-color:  #9772db;
@@ -67,7 +67,7 @@ html{
 
 .init{
     background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)), 
-    url(../img/fondo.jpg);
+    url(../img/background.jpg);
     background-size: cover;
     height: 100vh;
     color: #fff;
