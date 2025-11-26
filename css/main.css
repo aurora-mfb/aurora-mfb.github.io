@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Work+Sans:wght@100;300;400;600;800&display=swap');
+@import 'header.css';
+@import 'init.css';
+@import 'aboutme.css';
+@import 'skills.css';
+@import 'curriculum.css';
+@import 'portfolio.css';
+@import 'contact.css';
+@import 'footer.css';
+@import 'responsive.css';
+
+*{
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+

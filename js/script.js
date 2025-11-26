@@ -36,6 +36,17 @@ function updateTexts() {
 async function init() {
   // Cargar todas las secciones HTML
   await loadHTML("header", "html/header.html");
+
+  // Ahora sí existen los elementos, podemos asignar eventos
+  const navBtn = document.querySelector('.nav-responsive');
+  const navUl = document.querySelector('nav ul');
+
+  if(navBtn && navUl){
+    navBtn.addEventListener('click', () => {
+      navUl.classList.toggle('show');
+    });
+  }
+
   await loadHTML("init", "html/init.html");
   await loadHTML("aboutme", "html/aboutme.html");
   await loadHTML("skills", "html/skills.html");

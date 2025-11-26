@@ -1,0 +1,68 @@
+/* SKILL SECTION*/
+.skills{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.skills .content-section{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.skills h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.skills-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.skills-cloud img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.skills-cloud img:hover {
+  transform: scale(1.2) rotate(-5deg);
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.3));
+}
+
+.soft-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.soft-skills .skill-item {
+  background-color: #1e1822;
+  color: #cccccc;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: default;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.soft-skills .skill-item:hover {
+  transform: scale(1.1);
+  background-color: #3f3c46;
+}
+
+.skills h3{
+    font-size: 32px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}

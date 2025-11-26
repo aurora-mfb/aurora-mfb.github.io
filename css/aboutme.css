@@ -1,0 +1,127 @@
+/* ABOUTME SECTION*/
+.aboutme{
+    background-color: #131517;
+    color: #fff;
+    padding: 50px 20px;
+}
+
+.aboutme .content-section{
+    max-width: 1100px;
+    margin: auto;
+}
+
+.aboutme h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+
+.aboutme .content-section p{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+}
+
+.aboutme .content-section a{
+    font: 18px;
+    line-height: 22px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.aboutme .content-section p span{
+    color: #9389c9;
+    font-weight: bold;
+}
+
+.aboutme .tile{
+    display: flex;
+}
+
+.aboutme .tile .col{
+    width: 50%;
+}
+
+.aboutme .tile .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+
+.aboutme .tile .col ul{
+    list-style-type: none;
+}
+
+.aboutme .tile .col ul li{
+    margin: 12px 0;
+}
+
+.aboutme .tile .col ul li strong{
+    display: inline-block;
+    color: #9389c9;
+    width: 130px;
+}
+
+.aboutme .tile .col ul li span{
+    background-color: #9389c9;
+    padding: 3px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.aboutme .tile .col .content-interests{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.aboutme .tile .col .content-interests .interests{
+    width: 140px;
+    height:  140px;
+    background-color:#252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+
+.aboutme .tile .col .content-interests .interests:hover{
+    background-color: #504468;
+}
+
+.aboutme .tile .col .content-interests .interests i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.aboutme .cv-button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10;
+}
+
+.aboutme .cv-button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color:#504468;
+    z-index: -1;
+    transition: 1s;
+}
+
+.aboutme .cv-button:hover .overlay{
+    width: 100%;
+}

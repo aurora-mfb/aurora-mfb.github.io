@@ -1,0 +1,115 @@
+
+@media screen and (max-width: 980px){
+    /* Ocultar el menú horizontal */
+    .contenedor-header header ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252A2E;
+        position: absolute;
+        top: 60px; /* justo debajo del header */
+        left: 0;
+        text-align: center;
+        z-index: 100;
+    }
+
+    /* Mostrar menú al tener la clase 'show' */
+    .contenedor-header header ul.show {
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Mostrar botón hamburguesa */
+    .nav-responsive {
+        display: block;
+        font-size: 24px;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    /* Ajustes de los enlaces dentro del menú desplegable */
+    .contenedor-header header nav ul li {
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+        margin: 0;
+        justify-content: center;
+    }
+
+    .contenedor-header header nav ul li a {
+        margin: 0;
+    }
+}
+
+
+@media screen and (max-width: 700px){
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.show {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        background-color: #252A2E;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        text-align: center;
+    }
+
+    #languageSelector {
+        margin: 10px auto;
+        display: block;
+    }
+
+    h2 { font-size: 32px; }
+    h3 { font-size: 24px; }
+
+    .aboutme .tile,
+    .curriculum .tile,
+    .skills .tile {
+        display: block;
+    }
+
+    .aboutme .tile .col,
+    .curriculum .tile .col,
+    .skills .tile .col {
+        width: 100%;
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .curriculum .tile .right {
+        margin-left: 0;
+    }
+
+    .conectori,
+    .conectord {
+        display: none;
+    }
+
+    .portfolio .gallery {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .contact .tile {
+        display: block;
+    }
+
+    .contact .tile .col {
+        width: 100%;
+    }
+
+    .contact .col .send_email,
+    .contact .col .info {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: none;
+        max-width: 100%;
+        margin: 20px auto;
+    }
+}
