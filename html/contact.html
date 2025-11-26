@@ -1,13 +1,13 @@
 <section id="contact" class="contact">
   <div class="section-content">
-    <h2>Contacto</h2>
+    <h2 data-i18n="contact.title"></h2>
     <div class="tile">
       <!-- Formulario -->
       <div class="col">
         <div class="send_email">
-          <p>Para cualquier consulta, ¡Escríbeme!:</p>
-          <a href="mailto:aurora.mfb@gmail.com?subject=Consulta&body=Hola%2C%20quiero%20contactarte" class="button">
-            Enviar Email <i class="fa-solid fa-paper-plane"></i>
+          <p data-i18n="contact.send.description"></p>
+          <a href="mailto:aurora.mfb@gmail.com?subject=Consulta&body=Hola%2C%20quiero%20contactarte" class="button" data-i18n="contact.send">
+            <!-- El texto será reemplazado por JS -->
           </a>
         </div> 
       </div>
@@ -17,8 +17,8 @@
         <img src="img/address.png" alt="">
         <div class="info">
           <ul>
-            <li><i class="fa-solid fa-location-pin"></i> España</li>
-            <li><i class="fa-solid fa-envelope"></i> Email: aurora.mfb@gmail.com</li>
+            <li><i class="fa-solid fa-location-pin"></i> <span data-i18n="contact.country"></span></li>
+            <li><i class="fa-solid fa-envelope"></i> <span data-i18n="contact.email"></span></li>
           </ul>
         </div>
       </div>
